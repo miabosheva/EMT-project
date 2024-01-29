@@ -4,11 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ede0f11-a47e-4a67-a7ec-66358de101a8" name="Changes" comment="" />
+    <list default="true" id="8ede0f11-a47e-4a67-a7ec-66358de101a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/App/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/App/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/Books/BooksAdd/booksAdd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/Books/BooksEdit/booksEdit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/Books/BooksList/books.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/Books/bookTerm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/Categories/listCategories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/components/Header/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/custom-axios/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/repository/libraryRepository.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/setupTests.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2NLBx776JCEM2Qz7bDd9Nb74edH" />
   <component name="ProjectViewState">
@@ -19,7 +46,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DiANS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
   </component>
   <component name="RunManager">
@@ -40,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679433728484</updated>
       <workItem from="1679433729930" duration="657000" />
+      <workItem from="1706536027005" duration="19000" />
     </task>
     <servers />
   </component>
