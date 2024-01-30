@@ -32,20 +32,33 @@ jobs:
         docker push miabosheva/project-emt-frontend:latest
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Set Up Kubernetes
-        run: | 
-          echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig
-          kubectl config set-context k3d-emt-app-cluster --cluster=k3d-emt-app-cluster --user=admin@k3d-emt-app-cluster
-          kubectl config use-context k3d-emt-app-cluster
-      - name: Deploy to Kubernetes
-        run: |
-          kubectl apply -f kubernetes/deployment.yaml --validate=false
-          kubectl wait --for=condition=available --timeout=300s deployment/emt-app-deployment 
+    - name: Set Up Docker
+      run: |
+        docker-compose -f docker-compose.yml up -d
+
+    - name: Deploy to Docker
+      run: |
+        docker-compose -f docker-compose.yml exec backend mvn clean install
+
+
+    # steps:
+    #   - name: Checkout Repository
+    #     uses: actions/checkout@v2
+
+    #   - name: Set Up Kubernetes
+    #     run: | 
+    #       echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig
+    #       kubectl config set-context k3d-emt-app-cluster --cluster=k3d-emt-app-cluster --user=admin@k3d-emt-app-cluster
+    #       kubectl config use-context k3d-emt-app-cluster
+    #   - name: Deploy to Kubernetes
+    #     run: |
+    #       kubectl apply -f kubernetes/deployment.yaml --validate=false
+    #       kubectl wait --for=condition=available --timeout=300s deployment/emt-app-deployment 
 
   # deploy:
   #   runs-on: ubuntu-latest
