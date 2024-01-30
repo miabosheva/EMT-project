@@ -49,5 +49,5 @@ jobs:
 
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f /home/runner/work/EMT-project/EMT-project/kubernetes/deployment.yaml
+        kubectl apply -f EMT-project/kubernetes/deployment.yaml
     
