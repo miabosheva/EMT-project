@@ -1,0 +1,26 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: emt-app-deployment
+# spec:
+#   replicas: 2  
+#   selector:
+#     matchLabels:
+#       app: emt-app
+#   template:
+#     metadata:
+#       labels:
+#         app: emt-app
+#     spec:
+#       containers:
+#       - name: backend
+#         image: miabosheva/project-emt-backend:latest
+#         ports:
+#         - containerPort: 9091  
+#       - name: frontend
+#         image: miabosheva/project-emt-frontend:latest
+#         ports:
+#         - containerPort: 3000  
+#         env:
+#         - name: REACT_APP_API_URL
+#           value: "http://localhost:9091/api"
