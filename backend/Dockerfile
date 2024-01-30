@@ -1,9 +1,6 @@
 # Added: v2
 FROM maven:3.8.4-openjdk-11-slim AS builder
 
-# Added: v2
-COPY ./backend /app
-
 # Set the working directory in the container
 WORKDIR /app
 
