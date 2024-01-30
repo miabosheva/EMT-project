@@ -38,8 +38,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set Up Kubernetes
-        run: |
-          echo "${{ secrets.KUBE_CONFIG }}" > kubeconfig
+        run: | 
+          echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig
           kubectl config set-context k3d-emt-app-cluster --cluster=k3d-emt-app-cluster --user=admin@k3d-emt-app-cluster
           kubectl config use-context k3d-emt-app-cluster
       - name: Deploy to Kubernetes
