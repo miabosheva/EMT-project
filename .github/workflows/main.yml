@@ -44,8 +44,8 @@ jobs:
         context: k3d-emt-app-cluster
     - name: Debug Information
       run: |
-        ls -R kubernetes
-        cat kubernetes/deployment.yaml
+        pwd
+        ls -R
 
     - name: Deploy to Kubernetes
       run: |
