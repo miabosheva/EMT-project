@@ -1,11 +1,8 @@
-# Added: v2
-FROM maven:3.8.4-openjdk-11-slim AS builder
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:11-jre-slim
 
 # Set the working directory in the container
 WORKDIR /app
-
-# Added: v2
-RUN mvn clean install
 
 # Copy the application JAR file into the container
 COPY target/*.jar /app/app.jar
