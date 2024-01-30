@@ -42,7 +42,12 @@ jobs:
         method: kubeconfig
         kubeconfig: ${{ secrets.KUBE_CONFIG }}
         context: k3d-emt-app-cluster
+    - name: Debug Information
+      run: |
+        pwd
+        ls -R
 
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f kubernetes/deployment.yaml
+    
