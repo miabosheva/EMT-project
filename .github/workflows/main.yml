@@ -39,6 +39,9 @@ jobs:
           echo "${{ secrets.KUBE_CONFIG }}" > kubeconfig
           kubectl config set-context k3d-emt-app-cluster --cluster=k3d-emt-app-cluster --user=admin@k3d-emt-app-cluster
           kubectl config use-context k3d-emt-app-cluster
+      - name: Debug Information
+        run: |
+          ls -R
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f kubernetes/deployment.yaml
