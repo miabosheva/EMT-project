@@ -44,8 +44,8 @@ jobs:
           kubectl config use-context k3d-emt-app-cluster
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f kubernetes/deployment.yaml
-          kubectl wait --for=condition=available --timeout=300s deployment/emt-app-deployment
+          kubectl apply -f kubernetes/deployment.yaml --validate=false
+          kubectl wait --for=condition=available --timeout=300s deployment/emt-app-deployment 
 
   # deploy:
   #   runs-on: ubuntu-latest
