@@ -8,6 +8,8 @@ services:
       - "9091:9091"
     depends_on:
       - frontend
+    networks:
+      - mynetwork
 
   frontend:
     build:
@@ -16,3 +18,7 @@ services:
       - "3000:3000"
     environment:
       - REACT_APP_API_URL=http://localhost:9091/api
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
