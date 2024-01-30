@@ -16,19 +16,19 @@ jobs:
     - name: Build and Push Backend Docker Image
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
       run: |
         docker build -t miabosheva/project-emt-backend:latest ./backend
-        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_TOKEN
         docker push miabosheva/project-emt-backend:latest
 
     - name: Build and Push Frontend Docker Image
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        DOCKER_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
       run: |
         docker build -t miabosheva/project-emt-frontend:latest ./frontend
-        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_TOKEN
         docker push miabosheva/project-emt-frontend:latest
   # deploy:
   #   runs-on: ubuntu-latest
