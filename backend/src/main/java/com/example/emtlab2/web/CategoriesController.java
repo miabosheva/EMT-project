@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -15,6 +16,6 @@ import java.util.List;
 public class CategoriesController {
     @GetMapping
     public List<Category> allCategories(){
-        return Arrays.stream(Category.values()).toList();
+        return Arrays.stream(Category.values()).collect(Collectors.toList());
     }
 }
