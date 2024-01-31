@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: emt-app-deployment
+  namespace: emt-app-namespace
 spec:
   replicas: 2  
   selector:

@@ -1,0 +1,11 @@
+# from application-h2.properties, using h2 database
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: empt-app-configmap
+  namespace: emt-app-namespace
+data:
+  application.properties: |
+    spring.datasource.url=jdbc:h2:mem:emtdb
+    spring.datasource.username=sa
+    spring.datasource.password=
