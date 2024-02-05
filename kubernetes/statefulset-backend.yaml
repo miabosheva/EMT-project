@@ -1,37 +1,35 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: emt-app-statefulset
+  name: emt-app-statefulset-backend
   namespace: emt-app-namespace
 spec:
-  serviceName: emt-app-service
+  serviceName: emt-app-service-backend
   replicas: 2 
   selector:
     matchLabels:
       app: emt-app
+      tier: backend
   template:
     metadata:
       labels:
         app: emt-app
+        tier: backend
     spec:
       containers:
         - name: backend
           image: miabosheva/project-emt-backend:latest
           ports:
             - containerPort: 9091 
-        - name: frontend
-          image: miabosheva/project-emt-frontend:latest
-          ports:
-            - containerPort: 3000
           env:
             - name: REACT_APP_API_URL
-              value: http://emt-app-service:9091/api
+              value: http://localhost:9091/api
   volumeClaimTemplates:
     - metadata:
         name: data
       spec:
         accessModes: ["ReadWriteOnce"]
-        storageClassName: standard
+        storageClassName: local-path
         resources:
           requests:
             storage: 1Gi

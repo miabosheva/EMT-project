@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emt-app-deployment-backend
+  namespace: emt-app-namespace
+spec:
+  replicas: 2  
+  selector:
+    matchLabels:
+      app: emt-app
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: emt-app
+        tier: backend
+    spec:
+      containers:
+      - name: backend
+        image: miabosheva/project-emt-backend:latest
+        ports:
+        - containerPort: 9091  
+        env:
+        - name: REACT_APP_API_URL
+          value: "http://localhost:9091/api"
+      imagePullSecrets:
+        - name: docker-auth

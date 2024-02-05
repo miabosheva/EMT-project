@@ -11,17 +11,17 @@ spec:
     - host: emt-app.com
       http:
         paths:
-          - path: /backend
+          - path: /api
             pathType: Prefix
             backend:
               service:
-                name: emt-app-service
+                name: emt-app-service-backend
                 port:
                   number: 9091
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: emt-app-service
+                name: emt-app-service-frontend
                 port:
                   number: 3000

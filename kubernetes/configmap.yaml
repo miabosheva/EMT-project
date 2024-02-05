@@ -5,6 +5,8 @@ metadata:
   name: empt-app-configmap
   namespace: emt-app-namespace
 data:
+  DATABASE_URL: "jdbc:h2:tcp://localhost:9091/mem:emtdb"
+  APP_ENV: "production" 
   application.properties: |
     spring.datasource.url=jdbc:h2:mem:emtdb
     spring.datasource.username=sa
